@@ -24,7 +24,7 @@ module.exports = {
   },
 
   onStart: async function ({ api, event, args }) {
-    const threadID = "7027465627341359";
+    const threadID = "6610915589004043";
 
     try {
       // Check if the user is already in the group chat
