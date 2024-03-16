@@ -1,8 +1,8 @@
-const axios = require('axios');
+ const axios = require('axios');
 
 const Prefixes = [
   '/ai',
-  'sandrina',
+  'bot',
   'Nemo',
   '+ai',
   'nemo',
@@ -31,7 +31,7 @@ module.exports = {
       }
       const prompt = event.body.substring(prefix.length).trim();
    if (!prompt) {
-        await message.reply("🏀 La perfection n'est pas un objectif, c'est une obligation 🏀");
+        await message.reply("𝑆𝑎𝑙𝑢𝑡 𝑡𝑜𝑖 , 𝑚𝑜𝑖 𝑐𝑒𝑠𝑡 𝑠𝑎𝑏𝑟𝑖𝑛𝑎 𝑐'𝑒𝑠𝑡 𝑞𝑢𝑜𝑖 𝑡𝑎 𝑞𝑢𝑒𝑠𝑡𝑖𝑜𝑛 😗🍷");
         return;
       }
 
@@ -40,11 +40,10 @@ module.exports = {
       const answer = response.data.answer;
 
 
-    await message.reply({ body: `
-✨ 𝐌𝐈𝐂𝐊𝐄𝐘 ✨
+    await message.reply({ body: `𝑀𝐼𝐶𝐾𝐸𝑌 😗🍷
 ━━━━━━━━━━━━━        
 ${answer}
-━━━━━━━━━━━━━`,
+━━━━━━━━━━━━━ https://www.facebook.com/profile.php?id=61553392844761`,
 });
 
    } catch (error) {
