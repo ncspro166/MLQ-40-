@@ -29,7 +29,7 @@ module.exports = {
       confirmThisThread: "React to this message to confirm changing Lina's prefix in your chat box.",
       successGlobal: "Changed the prefix of Lina's global system to: %1",
       successThisThread: "Changed Lina's prefix in your chat box to: %1",
-      myPrefix: "𝐒𝐚𝐥𝐮𝐭, 𝐦𝐨𝐧 𝐧𝐨𝐦 𝐞𝐬𝐭 𝐒𝐚𝐧𝐝𝐫𝐢𝐧𝐚 (⁠ ⁠◜⁠‿⁠◝⁠ ⁠)⁠♡\𝐕𝐨𝐢𝐜𝐢 𝐦𝐨𝐧 𝐩𝐫𝐞𝐟𝐢𝐱:\n💌 𝐒𝐚𝐧𝐝𝐫𝐢𝐧𝐚 𝐩𝐫𝐞𝐟𝐢𝐱 𝐬𝐲𝐬𝐭ê𝐦𝐞: %1\n💌 𝐒𝐚𝐧𝐝𝐫𝐢𝐧𝐚 𝐩𝐫𝐞𝐟𝐢𝐱 𝐝𝐚𝐧𝐬 𝐯𝐨𝐭𝐫𝐞 𝐛𝐨𝐱: %2"
+      myPrefix: "𝐒𝐚𝐥𝐮𝐭, 𝐦𝐨𝐧 𝐧𝐨𝐦 𝐞𝐬𝐭 𝐒𝐚𝐛𝐫𝐢𝐧𝐚 (⁠ ⁠◜⁠‿⁠◝⁠ ⁠)⁠♡\𝐕𝐨𝐢𝐜𝐢 𝐦𝐨𝐧 𝐩𝐫𝐞𝐟𝐢𝐱:\n💌 𝐒𝐚𝐛𝐫𝐢𝐧𝐚 𝐩𝐫𝐞𝐟𝐢𝐱 𝐬𝐲𝐬𝐭ê𝐦𝐞: %1\n💌 𝐒𝐚𝐛𝐫𝐢𝐧𝐚 𝐩𝐫𝐞𝐟𝐢𝐱 𝐝𝐚𝐧𝐬 𝐯𝐨𝐭𝐫𝐞 𝐛𝐨𝐱: %2"
     }
   },
 
