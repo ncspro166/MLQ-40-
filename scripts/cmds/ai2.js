@@ -1,5 +1,4 @@
-cmd install botv2.js var noPrefix = [ "ai2", "Gpt", "liner", "sicbo", "gemini" ];
-var  prefix = ".";
+var noPrefix = [ "ai2", "Gpt", "liner", "sicbo", "gemini" ];var  prefix = ".";
 const { getStreamFromURL: st } = global.utils,
  { get, post } = require("axios");
 async function onChat({ message: m, event: e, args: a, usersData: u }) {
