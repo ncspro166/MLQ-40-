@@ -26,7 +26,7 @@ module.exports = {
       } else {
         approvedIDs.push(id);
         fs.writeFileSync(approvedIDsPath, JSON.stringify(approvedIDs));
-        api.sendMessage(`╔════ஜ۩۞۩ஜ═══╗\n\n📌 Request Accepted📌\nMain Cmds Unlocked\n\nyour request for use main cmds from bot has been approved by BotAdmin\nNow all locked commands will work for this thread.\n\nMessage from admin: ${messageFromAdmin} \n\n If you don't know how to use this bot then join the Marin support Box \nType : $support \nto join.\n\n╚════ஜ۩۞۩ஜ═══╝`, id);
+        api.sendMessage(`╔════ஜ۩۞۩ஜ═══╗\n\n📌 Request Accepted📌\nMain Cmds Unlocked\n\nyour request for use main cmds from bot has been approved by BotAdmin\nNow all locked commands will work for this thread.\n\nMessage from admin: ${messageFromAdmin} \n\n If you don't know how to use this bot then join the Asta support Box \nType : .support \nto join.\n\n╚════ஜ۩۞۩ஜ═══╝`, id);
         message.reply("╔════ஜ۩۞۩ஜ═══╗\n\nThis Thread has been approved now to use main command\n\n╚════ஜ۩۞۩ஜ═══╝");
 
         // Remove from pending IDs list
@@ -46,7 +46,7 @@ module.exports = {
       } else {
         approvedIDs.splice(approvedIDs.indexOf(id), 1);
         fs.writeFileSync(approvedIDsPath, JSON.stringify(approvedIDs));
-        api.sendMessage(`⚠️Warning ⚠️\nNow this Thread ID's permission has been disapproved or removed to use main commands from bot by Admin.\n\nReason: ${reason}\nContact Loid Butter for more \nFB: https://www.facebook.com/profile.php?id=100082741664058\n\n Also you can join support box for more info \nType: support\nto join`, id);
+        api.sendMessage(`⚠️Warning ⚠️\nNow this Thread ID's permission has been disapproved or removed to use main commands from bot by Admin.\n\nReason: ${reason}\nContact Asta ichiyukimøri for more \nFB: https://www.facebook.com/profile.php?id=100062160914296\n\n Also you can join support box for more info \nType: support\nto join`, id);
         message.reply("The thread ID has been removed from using main commend");
       }
 
@@ -63,7 +63,7 @@ module.exports = {
         // Remove from pending IDs list
         pendingIDs.splice(pendingIDs.indexOf(id), 1);
         fs.writeFileSync(pendingIDsPath, JSON.stringify(pendingIDs));
-        api.sendMessage(`⚠️ Warning ⚠️\nYour thread ID's permission to use main commands from bot has been disapproved by Admin. all cmds will be locked\n\nReason: ${reason}\nContact Loid Butter for more information.\nFB: https://www.facebook.com/profile.php?id=100082741664058\n\nor join the support box for more info \nType: $support\nto join `, id);
+        api.sendMessage(`⚠️ Warning ⚠️\nYour thread ID's permission to use main commands from bot has been disapproved by Admin. all cmds will be locked\n\nReason: ${reason}\nContact Asta ichiyukimøri for more information.\nFB: https://www.facebook.com/profile.php?id=100062160914296\n\nor join the support box for more info \nType: .support\nto join `, id);
         message.reply("The thread ID has been disapproved for using main commands.");
           }
       
@@ -84,3 +84,4 @@ module.exports = {
     }
   },
 };
+        
