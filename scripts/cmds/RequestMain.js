@@ -8,7 +8,7 @@ const approvedIDsPath = path.join(__dirname, "assist_json", "approved_main.json"
 module.exports = {
 	config: {
 		name: "requestMAIN",
-		version: "1.1",q
+		version: "1.1",
 		author: "SiAM",
 		countDown: 5,
 		category: "Utility",
@@ -29,7 +29,7 @@ module.exports = {
 		if (fs.existsSync(approvedIDsPath)) {
 			const approvedIDs = JSON.parse(fs.readFileSync(approvedIDsPath));
 			if (approvedIDs.includes(threadID)) {
-				const approvalMsg = "No need for approval. This thread is already approved to use all main  command from the bot.\n\n If you don't know how to use this bot then join the Marin support Box \nType : $support \nto join.";
+				const approvalMsg = "No need for approval. This thread is already approved to use all main  command from the bot.\n\n If you don't know how to use this bot then join Asta support Box \nType : .support \nto join.";
 				api.sendMessage(approvalMsg, threadID);
 				return;
 			}
@@ -39,7 +39,7 @@ module.exports = {
 		if (fs.existsSync(pendingIDsPath)) {
 			const pendingIDs = JSON.parse(fs.readFileSync(pendingIDsPath));
 			if (pendingIDs.includes(threadID)) {
-				const pendingMsg = "Your request to use bot main cmds is already in pending.... \nPlease contact Loid Butter Kyle Bait-it for fast approval.\n\n Facebook:https://www.facebook.com/profile.php?id=100052395031835\n\n also you can join  Marin support Box for help\nType : $support \nto join.";
+				const pendingMsg = "Your request to use bot main cmds is already in pending.... \nPlease contact Loid Butter Kyle Bait-it for fast approval.\n\n Facebook:https://www.facebook.com/profile.php?id=100062160914296\n\n also you can join Asta support Box for help\nType : .support \nto join.";
 				api.sendMessage(pendingMsg, threadID);
 				return;
 			}
@@ -67,7 +67,7 @@ for (const adminID of config.adminBot) {
 }
     
 
-		const notifyMsg = `✅Your approval request for using Bot's main cmds has been sent to admin SiAM with this\nmessage: ${userMessage}.\n\n I will notify you if your thread is approved. Please wait until then.\n\n join the Marin support Box if you facing any problem\nType : $support \nto join.`;
+		const notifyMsg = `✅Your approval request for using Bot's main cmds has been sent to admins with this\nmessage: ${userMessage}.\n\n I will notify you if your thread is approved. Please wait until then.\n\n join Asta support Box if you facing any problem\nType : $support \nto join.`;
 		api.sendMessage(notifyMsg, threadID);
 	}
 };
@@ -75,5 +75,4 @@ for (const adminID of config.adminBot) {
 async function getUserName(api, userID) {
 	const user = await api.getUserInfo(userID);
 	return user[userID].name;
-  }
-  
+}
