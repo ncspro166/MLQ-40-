@@ -1,81 +1,61 @@
 const axios = require('axios');
 
+const GPT_API_URL = 'https://sandipapi.onrender.com/gpt';
+const PREFIXES = ['ai','yanzu','ask','gpt','!ai','?ai','-ai','+ai','#ai','&ai','×ai'];
+const horizontalLine = "━━━━━━━━━━━━━━━";
+
 module.exports = {
   config: {
-    name: "asta",
+    name: "ai",
     version: 2.0,
     author: "OtinXSandip",
-    description: "ai",
-    role: 0,
+    longDescription: "AI",
     category: "ai",
     guide: {
-      en: "{p}{n} <Query>",
+      en: "{p} questions",
     },
   },
-  onStart: async function ({ message, usersData, event, api, args }) {
+  onStart: async function () {
+    // Initialization logic if needed
+  },
+  onChat: async function ({ api, event, args, message }) {
     try {
-      if (event.type === "message_reply" && event.messageReply.attachments && event.messageReply.attachments[0].type === "photo") {
-        const photoUrl = encodeURIComponent(event.messageReply.attachments[0].url);
-        const lado = args.join(" ");
-        const url = `https://sandipbaruwal.onrender.com/gemini2?prompt=${encodeURIComponent(lado)}&url=${photoUrl}`;
-        const response = await axios.get(url);
+      const prefix = PREFIXES.find((p) => event.body && event.body.toLowerCase().startsWith(p));
 
-        message.reply(response.data.answer);
+      if (!prefix) {
+        return; // Invalid prefix, ignore the command
+      }
+
+      const prompt = event.body.substring(prefix.length).trim();
+
+      if (!prompt) {
+        const defaultMessage = getCenteredHeader("𝙔𝘼𝙉𝙕𝙐 🤖") + "\n" + horizontalLine + "\nHello! Ask me anything!\n" + horizontalLine;
+        await message.reply(defaultMessage);
         return;
       }
 
-      const id = event.senderID;
-      const userData = await usersData.get(id);
-      const name = userData.name;
+      const answer = await getGPTResponse(prompt);
 
-      const ment = [{ id: id, tag: name }];
-      const prompt = args.join(" ");
-      const encodedPrompt = encodeURIComponent(prompt);
-      api.setMessageReaction("⏳", event.messageID, () => { }, true);
-      const res = await axios.get(`https://sandipbaruwal.onrender.com/gemini?prompt=${encodedPrompt}`);
-      const result = res.data.answer;
+      // Adding header and horizontal lines to the answer
+      const answerWithHeader = getCenteredHeader("𝙆𝙔𝙇𝙀'𝙎 🤖") + "\n" + horizontalLine + "\n" + answer + "\n" + horizontalLine;
       
-      api.setMessageReaction("✅", event.messageID, () => { }, true);
-      message.reply({
-        body: `${name}, ${result}`,
-        mentions: ment,
-      }, (err, info) => {
-        global.GoatBot.onReply.set(info.messageID, {
-          commandName: this.config.name,
-          messageID: info.messageID,
-          author: event.senderID
-        });
-      });
+      await message.reply(answerWithHeader);
     } catch (error) {
       console.error("Error:", error.message);
-    }
-  },
-  onReply: async function ({ message, event, Reply, args, api, usersData }) {
-    try {
-      const id = event.senderID;
-      const userData = await usersData.get(id);
-      const name = userData.name;
-
-      const ment = [{ id: id, tag: name }];
-      const prompt = args.join(" ");
-      const encodedPrompt = encodeURIComponent(prompt);
-      api.setMessageReaction("⏳", event.messageID, () => { }, true);
-      const res = await axios.get(`https://sandipbaruwal.onrender.com/gemini?prompt=${encodedPrompt}`);
-      const result = res.data.answer;
-     
-      api.setMessageReaction("✅", event.messageID, () => { }, true);
-      message.reply({
-        body: `${name}, ${result}`,
-        mentions: ment,
-      }, (err, info) => {
-        global.GoatBot.onReply.set(info.messageID, {
-          commandName: this.config.name,
-          messageID: info.messageID,
-          author: event.senderID
-        });
-      });
-    } catch (error) {
-      console.error("Error:", error.message);
+      // Additional error handling if needed
     }
   }
 };
+
+function getCenteredHeader(header) {
+  const totalWidth = 32; // Adjust the total width as needed
+  const padding = Math.max(0, Math.floor((totalWidth - header.length) / 2));
+  return " ".repeat(padding) + header;
+}
+
+async function getGPTResponse(prompt) {
+  // Implement caching logic here
+
+  const response = await axios.get(`${GPT_API_URL}?prompt=${encodeURIComponent(prompt)}`);
+  return response.data.answer;
+}
