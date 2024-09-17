@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const GPT_API_URL = 'https://sandipapi.onrender.com/gpt';
-const PREFIXES = ['ai','yanzu','ask','gpt','!ai','?ai','-ai','+ai','#ai','&ai','×ai'];
+const PREFIXES = ['ai','Asta','ask','gpt','!ai','?ai','-ai','+ai','#ai','&ai','×ai'];
 const horizontalLine = "━━━━━━━━━━━━━━━";
 
 module.exports = {
@@ -29,7 +29,7 @@ module.exports = {
       const prompt = event.body.substring(prefix.length).trim();
 
       if (!prompt) {
-        const defaultMessage = getCenteredHeader("𝙔𝘼𝙉𝙕𝙐 🤖") + "\n" + horizontalLine + "\nHello! Ask me anything!\n" + horizontalLine;
+        const defaultMessage = getCenteredHeader("𝗔𝗦𝗧𝗔 🤖") + "\n" + horizontalLine + "\nHello! Ask me anything!\n" + horizontalLine;
         await message.reply(defaultMessage);
         return;
       }
