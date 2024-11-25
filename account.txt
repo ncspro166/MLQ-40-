@@ -1,0 +1,47 @@
+[
+    {
+        "name": "_ga",
+        "value": "GA1.2.62465898.1732508978",
+        "domain": ".mozilla.org",
+        "hostOnly": false,
+        "path": "/",
+        "secure": false,
+        "httpOnly": false,
+        "sameSite": "no_restriction",
+        "session": false,
+        "firstPartyDomain": "",
+        "partitionKey": null,
+        "expirationDate": 1767068977,
+        "storeId": null
+    },
+    {
+        "name": "_gat",
+        "value": "1",
+        "domain": ".mozilla.org",
+        "hostOnly": false,
+        "path": "/",
+        "secure": false,
+        "httpOnly": false,
+        "sameSite": "no_restriction",
+        "session": false,
+        "firstPartyDomain": "",
+        "partitionKey": null,
+        "expirationDate": 1732509037,
+        "storeId": null
+    },
+    {
+        "name": "_gid",
+        "value": "GA1.2.2089812970.1732508978",
+        "domain": ".mozilla.org",
+        "hostOnly": false,
+        "path": "/",
+        "secure": false,
+        "httpOnly": false,
+        "sameSite": "no_restriction",
+        "session": false,
+        "firstPartyDomain": "",
+        "partitionKey": null,
+        "expirationDate": 1732595377,
+        "storeId": null
+    }
+]
