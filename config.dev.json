@@ -19,7 +19,7 @@
   "adminBot": [
     "61562523017713",
     "100083043846915",
-    ""
+    "61557606879019"
   ],
   "whiteListMode": {
     "enable": false,
@@ -29,7 +29,7 @@
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "sophia bot ",
+  "nickNameBot": "messenger bot ",
   "prefix": "-",
   "database": {
     "type": "sqlite",
@@ -63,7 +63,7 @@
     "socket": {
       "enable": true,
       "channelName": "uptime",
-      "verifyToken": ""
+      "verifyToken": "100"
     }
   },
   "autoRestart": {
