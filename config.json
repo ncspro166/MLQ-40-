@@ -1,9 +1,9 @@
 {
 	"facebookAccount": {
-		"email": "+639481373039",
-		"password": "Vietnam bot",
+		"email": "",
+		"password": "",
 		"2FASecret": "",
-		"i_user": "Vincent armenion",
+		"i_user": "",
 		"proxy": null,
 		"userAgent": "Mozilla/5.0 (Linux; Android 12; M2102J20SG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Mobile Safari/537.36",
 		"intervalGetNewCookie": 1440,
@@ -40,7 +40,7 @@
 	"timeZone": "Asia/Ho_Chi_Minh",
 	"credentials": {
 		"gmailAccount": {
-			"email": "+639481373039",
+			"email": "",
 			"clientId": "",
 			"clientSecret": "",
 			"refreshToken": "",
