@@ -1,7 +1,7 @@
 [
     {
-        "name": "_ga",
-        "value": "GA1.2.62465898.1732508978",
+        "name": "_ga_B9CY1C9VBC",
+        "value": "GS1.1.1732595308.4.1.1732597449.0.0.0",
         "domain": ".mozilla.org",
         "hostOnly": false,
         "path": "/",
@@ -11,7 +11,22 @@
         "session": false,
         "firstPartyDomain": "",
         "partitionKey": null,
-        "expirationDate": 1767068977,
+        "expirationDate": 1767157449,
+        "storeId": null
+    },
+    {
+        "name": "_ga",
+        "value": "GA1.1.62465898.1732508978",
+        "domain": ".mozilla.org",
+        "hostOnly": false,
+        "path": "/",
+        "secure": false,
+        "httpOnly": false,
+        "sameSite": "no_restriction",
+        "session": false,
+        "firstPartyDomain": "",
+        "partitionKey": null,
+        "expirationDate": 1767157443,
         "storeId": null
     },
     {
@@ -26,12 +41,27 @@
         "session": false,
         "firstPartyDomain": "",
         "partitionKey": null,
-        "expirationDate": 1732509037,
+        "expirationDate": 1732597470,
         "storeId": null
     },
     {
         "name": "_gid",
         "value": "GA1.2.2089812970.1732508978",
+        "domain": "addons.mozilla.org",
+        "hostOnly": true,
+        "path": "/",
+        "secure": true,
+        "httpOnly": true,
+        "sameSite": "no_restriction",
+        "session": false,
+        "firstPartyDomain": "",
+        "partitionKey": null,
+        "expirationDate": 1732678737,
+        "storeId": null
+    },
+    {
+        "name": "_gid",
+        "value": "GA1.2.1873278621.1732595307",
         "domain": ".mozilla.org",
         "hostOnly": false,
         "path": "/",
@@ -41,7 +71,22 @@
         "session": false,
         "firstPartyDomain": "",
         "partitionKey": null,
-        "expirationDate": 1732595377,
+        "expirationDate": 1732683843,
+        "storeId": null
+    },
+    {
+        "name": "sessionid",
+        "value": "8mgypjzvlwxsu153aivy23rqjxnaqhsg",
+        "domain": "addons.mozilla.org",
+        "hostOnly": true,
+        "path": "/",
+        "secure": false,
+        "httpOnly": true,
+        "sameSite": "lax",
+        "session": false,
+        "firstPartyDomain": "",
+        "partitionKey": null,
+        "expirationDate": 1732596104,
         "storeId": null
     }
 ]
