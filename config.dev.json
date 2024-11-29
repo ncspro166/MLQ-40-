@@ -1,6 +1,6 @@
 {
   "facebookAccount": {
-    "email": "dogodeno120@gmail.com",
+    "email": "proncs880@gmail.com",
     "password": "prince12ke",
     "2FASecret": "",
     "i_user": "",
@@ -29,7 +29,7 @@
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "messenger bot ",
+  "nickNameBot": "princes 💚",
   "prefix": "-",
   "database": {
     "type": "sqlite",
@@ -55,7 +55,7 @@
   "dashBoard": {
     "enable": true,
     "expireVerifyCode": 300000,
-    "port": 3001
+    "port": 4001
   },
   "serverUptime": {
     "enable": false,
